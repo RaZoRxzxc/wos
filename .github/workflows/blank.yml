@@ -1,0 +1,17 @@
+name: CI
+
+on: [push]
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - run: docker build -t ghcr.io/razorxzxc/370-python-deploy:1.0 .
+      - run: docker push ghcr.io/razorxzxc/370-python-deploy:1.0
