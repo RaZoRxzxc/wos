@@ -15,4 +15,4 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
       - run: docker build -t ghcr.io/razorxzxc/2:1.0 .
       - run: docker push ghcr.io/razorxzxc/2:1.0
-      - run: ssh -o "StrictHostKeyChecking no" 'razorxzxc-wos-jlhmyfp9t0t#3FBK.k5UOWIxb0i8T0Xux2Hed85nT7Nm@razorxzxc-wos-jlhmyfp9t0t.ssh.ws-eu106.gitpod.io'
+      - run: ssh -o "StrictHostKeyChecking no" 'razorxzxc-wos-jlhmyfp9t0t#3FBK.k5UOWIxb0i8T0Xux2Hed85nT7Nm@razorxzxc-wos-jlhmyfp9t0t.ssh.ws-eu106.gitpod.io' 'itpod.io' 'cd /workspace/wos && docker compose pull && docker com'
