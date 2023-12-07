@@ -13,5 +13,5 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/razorxzxc/370-python-deploy:1.0 .
-      - run: docker push ghcr.io/razorxzxc/370-python-deploy:1.0
+      - run: docker build -t ghcr.io/razorxzxc/2:1.0 .
+      - run: docker push ghcr.io/razorxzxc/2:1.0
